@@ -19,7 +19,8 @@ class VectorUtilityTest {
 
         assertArrayEquals(new double[] {3.0, -4.0, 6.5}, result, 1e-9);
     }
-}
+
+    @Test
     void add_returnsElementWiseSum() {
         double[] v1 = {1.5, -2.0, 3.25};
         double[] v2 = {2.5, 4.0, -1.25};
@@ -75,5 +76,4 @@ class VectorUtilityTest {
         assertThrows(IllegalArgumentException.class,
                 () -> vectorUtility.dotProduct(v1, v2));
     }
-
 }
