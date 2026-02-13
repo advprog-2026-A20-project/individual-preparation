@@ -21,7 +21,7 @@ class ArithmeticUtilityTest {
 
         assertEquals(1.0, result, 1e-9);
     }
-      
+
     @Test
     void divideReturnsQuotient() {
         ArithmeticUtility utility = new ArithmeticUtility();
