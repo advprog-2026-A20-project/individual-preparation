@@ -20,5 +20,13 @@ class ArithmeticUtilityTest {
         double result = arithmeticUtility.exponent(5.5, 0);
 
         assertEquals(1.0, result, 1e-9);
+      
+    @Test
+    void divideReturnsQuotient() {
+        ArithmeticUtility utility = new ArithmeticUtility();
+
+        double result = utility.divide(9.0, 4.0);
+
+        assertEquals(2.25, result);
     }
 }
