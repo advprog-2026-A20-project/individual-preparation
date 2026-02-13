@@ -30,4 +30,22 @@ class ArithmeticUtilityTest {
 
         assertEquals(2.25, result);
     }
+
+    @Test
+    void subtractReturnsDifference() {
+        ArithmeticUtility utility = new ArithmeticUtility();
+
+        double result = utility.subtract(7.5, 2.5);
+
+        assertEquals(5.0, result);
+    }
+
+    @Test
+    void subtractWithNegativeResult() {
+        ArithmeticUtility utility = new ArithmeticUtility();
+
+        double result = utility.subtract(3.0, 5.0);
+
+        assertEquals(-2.0, result);
+    }
 }
