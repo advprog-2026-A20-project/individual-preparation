@@ -13,8 +13,14 @@ class ArithmeticUtilityTest {
         assertEquals(-15.0, arithmeticUtility.multiply(-3.0, 5.0), 1e-9);
         assertEquals(0.0, arithmeticUtility.multiply(0.0, 8.5), 1e-9);
         assertEquals(2.25, arithmeticUtility.multiply(1.5, 1.5), 1e-9);
+    }
 
-    private final ArithmeticUtility arithmeticUtility = new ArithmeticUtility();
+    @Test
+    void add_returnsSumForVariousOperands() {
+        assertEquals(7.5, arithmeticUtility.add(3.0, 4.5), 1e-9);
+        assertEquals(-2.0, arithmeticUtility.add(3.0, -5.0), 1e-9);
+        assertEquals(0.0, arithmeticUtility.add(-1.25, 1.25), 1e-9);
+    }
 
     @Test
     void exponent_handlesPositiveExponent() {
