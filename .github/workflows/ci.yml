@@ -19,8 +19,8 @@ jobs:
           java-version: '21'
       - name: Set up Gradle
         uses: gradle/actions/setup-gradle@v4
-      - name: Test and Checkstyle
-        run: ./gradlew test check
+      - name: Test, Checkstyle, and JaCoCo
+        run: ./gradlew test check jacocoTestReport
       - name: SonarCloud
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
