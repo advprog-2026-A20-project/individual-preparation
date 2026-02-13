@@ -36,6 +36,12 @@ public class VectorUtility {
     }
     
     public double dotProduct(double[] v1, double[] v2) {
+        if (v1.length == 0) {
+            throw new IllegalArgumentException("Vektor tidak boleh kosong");
+        }
+        if (v1.length != v2.length) {
+            throw new IllegalArgumentException("Dimensi kedua vektor harus sama");
+        }
         double sum = 0.0;
         for (int i = 0; i < v1.length; i++) {
             sum += v1[i] * v2[i];
