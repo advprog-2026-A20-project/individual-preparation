@@ -76,4 +76,21 @@ class VectorUtilityTest {
         assertThrows(IllegalArgumentException.class,
                 () -> vectorUtility.dotProduct(v1, v2));
     }
+
+    @Test
+    void normReturnsEuclideanLength() {
+        double[] v1 = {3.0, 4.0};
+
+        double result = vectorUtility.norm(v1);
+
+        assertEquals(5.0, result, 1e-9);
+    }
+
+    @Test
+    void normThrowsWhenVectorIsEmpty() {
+        double[] v1 = {};
+
+        assertThrows(IllegalArgumentException.class,
+                () -> vectorUtility.norm(v1));
+    }
 }

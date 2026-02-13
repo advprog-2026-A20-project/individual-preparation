@@ -53,7 +53,13 @@ public class VectorUtility {
     }
     
     public double norm(double[] v1) {
-        // TODO: Implement me properly!
-        return 0.0;
+        if (v1.length == 0) {
+            throw new IllegalArgumentException("Vektor tidak boleh kosong");
+        }
+        double sumSquares = 0.0;
+        for (double value : v1) {
+            sumSquares += value * value;
+        }
+        return Math.sqrt(sumSquares);
     }
 }

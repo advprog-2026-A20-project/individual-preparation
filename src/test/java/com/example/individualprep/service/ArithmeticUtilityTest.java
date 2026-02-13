@@ -16,6 +16,13 @@ class ArithmeticUtilityTest {
     }
 
     @Test
+    void add_returnsSumForVariousOperands() {
+        assertEquals(7.5, arithmeticUtility.add(3.0, 4.5), 1e-9);
+        assertEquals(-2.0, arithmeticUtility.add(3.0, -5.0), 1e-9);
+        assertEquals(0.0, arithmeticUtility.add(-1.25, 1.25), 1e-9);
+    }
+
+    @Test
     void exponent_handlesPositiveExponent() {
         double result = arithmeticUtility.exponent(2.0, 3);
 
